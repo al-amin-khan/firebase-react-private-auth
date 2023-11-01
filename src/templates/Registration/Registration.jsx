@@ -1,10 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { authContext } from '../AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
 import { sendEmailVerification, updateProfile } from 'firebase/auth';
 
 const Registration = () => {
+    const [show, setShow] = useState(true);
+
     const {user, registerUser} = useContext(authContext);
     console.log(user);
 
@@ -102,7 +104,19 @@ const Registration = () => {
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                                    {/* <input type="password" name='password' placeholder="password" className="input input-bordered" required /> */}
+                                    <div className='relative'>
+                                        <input type={show ? 'password' : 'text'} name='password' placeholder="password" className="input input-bordered" required />
+                                        <div onClick={() => setShow(!show)} className="absolute inset-y-0 right-0 pr-1 flex items-center pointer-events-auto">
+                                            {
+                                                show 
+                                                ? 
+                                                <img src="/close-eye.png" alt="eye-closed" height='35px' width='35px' />
+                                                :
+                                                <img src="/open-eye.png" alt="eye-open" height='35px' width='35px' />
+                                            }
+                                        </div>
+                                    </div>
                                     <label className="label">
                                         <p><small>Already a member?</small> {' '}
                                             <Link to="/login" className="label-text-alt link link-hover font-semibold text-sm text-teal-500">Login</Link>  

@@ -5,7 +5,7 @@ const Home = () => {
     const {name} = useContext(authContext);
     return (
         <div>
-            <p>Home sections</p>
+            <img src="/landing-page.png" alt="" width='100%' />
         </div>
     );
 };

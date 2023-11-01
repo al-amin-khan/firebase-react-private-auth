@@ -25,18 +25,13 @@ const Header = () => {
                     <li><Link to='/dashboard'><a>Dashboard</a></Link></li>
                 </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Onneshon</a>
+                <a className="btn btn-ghost normal-case text-xl"> <Link to='/home'>Onneshon</Link> </a>
             </div>
             <div className="navbar-center hidden lg:flex font-semibold">
-                <ul className="menu menu-horizontal px-1">
-                    <li><a><Link to='/home'>Home</Link></a></li>
-                    <li><a><Link to='/registration'>Registration</Link></a></li>
-                    <li><a><Link to='/dashboard'>Dashboard</Link></a></li>
-                    
-                    {/* <li><Link to='/home'><a>Home</a></Link></li>
-                    <li><Link to='/login'><a>Login</a></Link></li>
+                <ul className="menu menu-horizontal px-1">                   
+                    <li><Link to='/home'><a>Home</a></Link></li>
                     <li><Link to='/registration'><a>Registration</a></Link></li>
-                    <li><Link to='/dashboard'><a>Dashboard</a></Link></li> */}
+                    <li><Link to='/dashboard'><a>Dashboard</a></Link></li>
                 </ul>
             </div>
             {
