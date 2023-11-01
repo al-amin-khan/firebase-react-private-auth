@@ -17,7 +17,7 @@ firebase.config.js
 .idea
 **/node_modules/*
 **/.firebaserc
-
+.firebase/hosting.ZGlzdA.cache
 ### Firebase Patch ###
 .runtimeconfig.json
 .firebase/
