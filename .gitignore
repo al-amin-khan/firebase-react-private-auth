@@ -12,7 +12,15 @@ dist
 dist-ssr
 *.local
 
+### Firebase ###
 firebase.config.js
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
 
 # Editor directories and files
 .vscode/*
